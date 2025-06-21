@@ -1,0 +1,27 @@
+## Build results
+bin/
+obj/
+*.dll
+*.exe
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## ASP.NET
+wwwroot/lib/
+appsettings.Development.json
+
+## Visual Studio
+.vs/
+*.dbmdl
+
+## Others
+_ReSharper*/
+*.ncrunch*
+*.vscode/
+
+## Ignore CinelogMVC folder
+CinelogMVC/

@@ -1,0 +1,14 @@
+2025-06-13 19:31:25.696 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 19:31:25.827 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 19:31:25.827 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 19:31:25.881 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 19:31:25.881 +04:00 [INF] Hosting environment: Development
+2025-06-13 19:31:25.881 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 19:31:26.220 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 19:31:26.339 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 121.7524ms
+2025-06-13 19:31:26.388 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 19:31:26.393 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 4.6657ms
+2025-06-13 19:31:26.602 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 19:31:26.623 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.183ms
+2025-06-13 19:31:26.967 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 19:31:27.012 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.0435ms

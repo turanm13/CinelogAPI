@@ -1,0 +1,524 @@
+2025-06-13 19:31:26.091 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 19:31:26.242 +04:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address https://127.0.0.1:7209: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-06-13 19:31:50.695 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 19:31:50.804 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 19:31:50.804 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 19:31:50.856 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 19:31:50.856 +04:00 [INF] Hosting environment: Development
+2025-06-13 19:31:50.856 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 19:31:51.334 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 19:31:51.441 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 107.8196ms
+2025-06-13 19:31:51.454 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 19:31:51.457 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 2.7419ms
+2025-06-13 19:31:51.633 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 19:31:51.652 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.6881ms
+2025-06-13 19:31:51.957 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 19:31:51.983 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.0428ms
+2025-06-13 19:32:00.570 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/api/Actor/GetAll - null null
+2025-06-13 19:32:00.585 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetAll (CinelogAPI)'
+2025-06-13 19:32:00.597 +04:00 [INF] Route matched with {action = "GetAll", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 19:32:01.510 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-06-13 19:32:01.727 +04:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate], [t].[MovieId], [t].[ActorId], [t].[CharacterName], [t].[Id], [t].[CreatedDate], [t].[Description], [t].[Duration], [t].[IsDeleted], [t].[PosterUrl], [t].[ReleaseDate], [t].[Title], [t].[UpdatedDate], [t0].[SeriesId], [t0].[ActorId], [t0].[CharacterName], [t0].[Id], [t0].[CreatedDate], [t0].[Description], [t0].[IsDeleted], [t0].[PosterUrl], [t0].[ReleaseDate], [t0].[Title], [t0].[UpdatedDate]
+FROM [Actors] AS [a]
+LEFT JOIN (
+    SELECT [m].[MovieId], [m].[ActorId], [m].[CharacterName], [m0].[Id], [m0].[CreatedDate], [m0].[Description], [m0].[Duration], [m0].[IsDeleted], [m0].[PosterUrl], [m0].[ReleaseDate], [m0].[Title], [m0].[UpdatedDate]
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+) AS [t] ON [a].[Id] = [t].[ActorId]
+LEFT JOIN (
+    SELECT [s].[SeriesId], [s].[ActorId], [s].[CharacterName], [s0].[Id], [s0].[CreatedDate], [s0].[Description], [s0].[IsDeleted], [s0].[PosterUrl], [s0].[ReleaseDate], [s0].[Title], [s0].[UpdatedDate]
+    FROM [SeriesActors] AS [s]
+    INNER JOIN [Series] AS [s0] ON [s].[SeriesId] = [s0].[Id]
+) AS [t0] ON [a].[Id] = [t0].[ActorId]
+ORDER BY [a].[Id], [t].[MovieId], [t].[ActorId], [t].[Id], [t0].[SeriesId], [t0].[ActorId]
+2025-06-13 19:32:01.864 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Actor.ActorDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-13 19:32:01.872 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.GetAll (CinelogAPI) in 1272.942ms
+2025-06-13 19:32:01.872 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetAll (CinelogAPI)'
+2025-06-13 19:32:01.876 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/api/Actor/GetAll - 200 null application/json; charset=utf-8 1306.1287ms
+2025-06-13 19:32:13.605 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/api/Actor/GetById/45 - null null
+2025-06-13 19:32:13.608 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetById (CinelogAPI)'
+2025-06-13 19:32:13.620 +04:00 [INF] Route matched with {action = "GetById", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 19:32:13.686 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-06-13 19:32:13.719 +04:00 [INF] Executed DbCommand (22ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Bio], [t].[BirthDate], [t].[CreatedDate], [t].[FullName], [t].[ImageUrl], [t].[IsDeleted], [t].[UpdatedDate], [t0].[MovieId], [t0].[ActorId], [t0].[CharacterName], [t0].[Id], [t0].[CreatedDate], [t0].[Description], [t0].[Duration], [t0].[IsDeleted], [t0].[PosterUrl], [t0].[ReleaseDate], [t0].[Title], [t0].[UpdatedDate], [t1].[SeriesId], [t1].[ActorId], [t1].[CharacterName], [t1].[Id], [t1].[CreatedDate], [t1].[Description], [t1].[IsDeleted], [t1].[PosterUrl], [t1].[ReleaseDate], [t1].[Title], [t1].[UpdatedDate]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate]
+    FROM [Actors] AS [a]
+    WHERE [a].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [m].[MovieId], [m].[ActorId], [m].[CharacterName], [m0].[Id], [m0].[CreatedDate], [m0].[Description], [m0].[Duration], [m0].[IsDeleted], [m0].[PosterUrl], [m0].[ReleaseDate], [m0].[Title], [m0].[UpdatedDate]
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[ActorId]
+LEFT JOIN (
+    SELECT [s].[SeriesId], [s].[ActorId], [s].[CharacterName], [s0].[Id], [s0].[CreatedDate], [s0].[Description], [s0].[IsDeleted], [s0].[PosterUrl], [s0].[ReleaseDate], [s0].[Title], [s0].[UpdatedDate]
+    FROM [SeriesActors] AS [s]
+    INNER JOIN [Series] AS [s0] ON [s].[SeriesId] = [s0].[Id]
+) AS [t1] ON [t].[Id] = [t1].[ActorId]
+ORDER BY [t].[Id], [t0].[MovieId], [t0].[ActorId], [t0].[Id], [t1].[SeriesId], [t1].[ActorId]
+2025-06-13 19:32:13.721 +04:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-06-13 19:32:13.721 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.GetById (CinelogAPI) in 101.1699ms
+2025-06-13 19:32:13.721 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetById (CinelogAPI)'
+2025-06-13 19:32:13.722 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/api/Actor/GetById/45 - 204 null null 116.835ms
+2025-06-13 19:32:28.055 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/api/Actor/GetById/5 - null null
+2025-06-13 19:32:28.057 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetById (CinelogAPI)'
+2025-06-13 19:32:28.057 +04:00 [INF] Route matched with {action = "GetById", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 19:32:28.088 +04:00 [INF] Executed DbCommand (16ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Bio], [t].[BirthDate], [t].[CreatedDate], [t].[FullName], [t].[ImageUrl], [t].[IsDeleted], [t].[UpdatedDate], [t0].[MovieId], [t0].[ActorId], [t0].[CharacterName], [t0].[Id], [t0].[CreatedDate], [t0].[Description], [t0].[Duration], [t0].[IsDeleted], [t0].[PosterUrl], [t0].[ReleaseDate], [t0].[Title], [t0].[UpdatedDate], [t1].[SeriesId], [t1].[ActorId], [t1].[CharacterName], [t1].[Id], [t1].[CreatedDate], [t1].[Description], [t1].[IsDeleted], [t1].[PosterUrl], [t1].[ReleaseDate], [t1].[Title], [t1].[UpdatedDate]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate]
+    FROM [Actors] AS [a]
+    WHERE [a].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [m].[MovieId], [m].[ActorId], [m].[CharacterName], [m0].[Id], [m0].[CreatedDate], [m0].[Description], [m0].[Duration], [m0].[IsDeleted], [m0].[PosterUrl], [m0].[ReleaseDate], [m0].[Title], [m0].[UpdatedDate]
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[ActorId]
+LEFT JOIN (
+    SELECT [s].[SeriesId], [s].[ActorId], [s].[CharacterName], [s0].[Id], [s0].[CreatedDate], [s0].[Description], [s0].[IsDeleted], [s0].[PosterUrl], [s0].[ReleaseDate], [s0].[Title], [s0].[UpdatedDate]
+    FROM [SeriesActors] AS [s]
+    INNER JOIN [Series] AS [s0] ON [s].[SeriesId] = [s0].[Id]
+) AS [t1] ON [t].[Id] = [t1].[ActorId]
+ORDER BY [t].[Id], [t0].[MovieId], [t0].[ActorId], [t0].[Id], [t1].[SeriesId], [t1].[ActorId]
+2025-06-13 19:32:28.089 +04:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-06-13 19:32:28.089 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.GetById (CinelogAPI) in 31.8696ms
+2025-06-13 19:32:28.089 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetById (CinelogAPI)'
+2025-06-13 19:32:28.089 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/api/Actor/GetById/5 - 204 null null 34.2705ms
+2025-06-13 19:56:30.922 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 19:56:31.024 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 19:56:31.025 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 19:56:31.075 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 19:56:31.075 +04:00 [INF] Hosting environment: Development
+2025-06-13 19:56:31.075 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 19:56:31.468 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 19:56:31.575 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 108.0888ms
+2025-06-13 19:56:31.657 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 19:56:31.657 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 19:56:31.660 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 2.7056ms
+2025-06-13 19:56:31.677 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.1412ms
+2025-06-13 19:56:31.903 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 19:56:31.928 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.3494ms
+2025-06-13 19:56:48.179 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 19:56:48.288 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 19:56:48.288 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 19:56:48.342 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 19:56:48.342 +04:00 [INF] Hosting environment: Development
+2025-06-13 19:56:48.342 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 19:56:52.046 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 19:56:52.153 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 19:56:52.153 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 19:56:52.207 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 19:56:52.208 +04:00 [INF] Hosting environment: Development
+2025-06-13 19:56:52.208 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 19:56:52.388 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 19:56:52.502 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 114.5178ms
+2025-06-13 19:56:52.512 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 19:56:52.516 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 3.723ms
+2025-06-13 19:56:52.695 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 19:56:52.717 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.5051ms
+2025-06-13 19:56:53.025 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 19:56:53.057 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.6652ms
+2025-06-13 19:58:33.873 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7209/api/Actor/Create - multipart/form-data; boundary=----WebKitFormBoundaryTlGJwAK28TYhSiWw 1313
+2025-06-13 19:58:33.893 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.Create (CinelogAPI)'
+2025-06-13 19:58:33.911 +04:00 [INF] Route matched with {action = "Create", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Actor.ActorCreateDto) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 19:58:34.682 +04:00 [WRN] Image file not provided in CreateAsync
+2025-06-13 19:58:34.685 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.Create (CinelogAPI) in 772.2187ms
+2025-06-13 19:58:34.686 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.Create (CinelogAPI)'
+2025-06-13 19:58:34.689 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Image file is required
+   at Service.Services.ActorService.CreateAsync(ActorCreateDto actor, String webRootPath) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 37
+   at CinelogAPI.Controllers.Admin.ActorController.Create(ActorCreateDto request) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 19:58:34.720 +04:00 [ERR] Exception occurred
+System.ArgumentException: Image file is required
+   at Service.Services.ActorService.CreateAsync(ActorCreateDto actor, String webRootPath) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 37
+   at CinelogAPI.Controllers.Admin.ActorController.Create(ActorCreateDto request) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 32
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 19:58:34.730 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7209/api/Actor/Create - 400 null application/json; charset=utf-8 856.9849ms
+2025-06-13 19:59:36.314 +04:00 [INF] Request starting HTTP/2 POST https://localhost:7209/api/Actor/Create - multipart/form-data; boundary=----WebKitFormBoundaryGFvgQnPciEJfQtYh 1210566
+2025-06-13 19:59:36.318 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.Create (CinelogAPI)'
+2025-06-13 19:59:36.318 +04:00 [INF] Route matched with {action = "Create", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(Service.DTOs.Actor.ActorCreateDto) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 19:59:36.368 +04:00 [INF] Saving image file to path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\wwwroot\images\a3e6be4a-4470-4d11-9fb1-53fb0cde6b1b-Benedict Cumberbatch.jpg
+2025-06-13 19:59:36.373 +04:00 [INF] Image saved successfully.
+2025-06-13 19:59:36.712 +04:00 [INF] Executed DbCommand (35ms) [Parameters=[@p0='?' (Size = 1000), @p1='?' (DbType = Date), @p2='?' (DbType = DateTime2), @p3='?' (Size = 30), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Actors] ([Bio], [BirthDate], [CreatedDate], [FullName], [ImageUrl], [IsDeleted], [UpdatedDate])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-13 19:59:36.743 +04:00 [INF] Actor created successfully: Benedict Cumberbatch
+2025-06-13 19:59:36.746 +04:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-06-13 19:59:36.746 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.Create (CinelogAPI) in 427.7476ms
+2025-06-13 19:59:36.746 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.Create (CinelogAPI)'
+2025-06-13 19:59:36.750 +04:00 [INF] Request finished HTTP/2 POST https://localhost:7209/api/Actor/Create - 200 0 null 435.7611ms
+2025-06-13 20:18:41.966 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 20:18:42.071 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 20:18:42.072 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 20:18:42.123 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 20:18:42.124 +04:00 [INF] Hosting environment: Development
+2025-06-13 20:18:42.124 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 20:18:42.400 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 20:18:42.505 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 106.1803ms
+2025-06-13 20:18:42.595 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 20:18:42.595 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 20:18:42.599 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 4.2271ms
+2025-06-13 20:18:42.615 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.4358ms
+2025-06-13 20:18:42.909 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 20:18:42.940 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.326ms
+2025-06-13 20:18:51.849 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 20:18:51.854 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 4.7686ms
+2025-06-13 20:18:51.869 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 20:18:51.874 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 20:18:51.875 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 0.5343ms
+2025-06-13 20:18:51.876 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.8785ms
+2025-06-13 20:18:52.098 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 20:18:52.115 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.7635ms
+2025-06-13 20:19:02.722 +04:00 [INF] Request starting HTTP/2 DELETE https://localhost:7209/api/Actor/Delete?id=10 - null null
+2025-06-13 20:19:02.742 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.Delete (CinelogAPI)'
+2025-06-13 20:19:02.760 +04:00 [INF] Route matched with {action = "Delete", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 20:19:03.649 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-06-13 20:19:03.882 +04:00 [INF] Executed DbCommand (40ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Bio], [t].[BirthDate], [t].[CreatedDate], [t].[FullName], [t].[ImageUrl], [t].[IsDeleted], [t].[UpdatedDate], [t0].[MovieId], [t0].[ActorId], [t0].[CharacterName], [t0].[Id], [t0].[CreatedDate], [t0].[Description], [t0].[Duration], [t0].[IsDeleted], [t0].[PosterUrl], [t0].[ReleaseDate], [t0].[Title], [t0].[UpdatedDate], [t1].[SeriesId], [t1].[ActorId], [t1].[CharacterName], [t1].[Id], [t1].[CreatedDate], [t1].[Description], [t1].[IsDeleted], [t1].[PosterUrl], [t1].[ReleaseDate], [t1].[Title], [t1].[UpdatedDate]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate]
+    FROM [Actors] AS [a]
+    WHERE [a].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [m].[MovieId], [m].[ActorId], [m].[CharacterName], [m0].[Id], [m0].[CreatedDate], [m0].[Description], [m0].[Duration], [m0].[IsDeleted], [m0].[PosterUrl], [m0].[ReleaseDate], [m0].[Title], [m0].[UpdatedDate]
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+) AS [t0] ON [t].[Id] = [t0].[ActorId]
+LEFT JOIN (
+    SELECT [s].[SeriesId], [s].[ActorId], [s].[CharacterName], [s0].[Id], [s0].[CreatedDate], [s0].[Description], [s0].[IsDeleted], [s0].[PosterUrl], [s0].[ReleaseDate], [s0].[Title], [s0].[UpdatedDate]
+    FROM [SeriesActors] AS [s]
+    INNER JOIN [Series] AS [s0] ON [s].[SeriesId] = [s0].[Id]
+) AS [t1] ON [t].[Id] = [t1].[ActorId]
+ORDER BY [t].[Id], [t0].[MovieId], [t0].[ActorId], [t0].[Id], [t1].[SeriesId], [t1].[ActorId]
+2025-06-13 20:19:03.897 +04:00 [WRN] Actor with id 10 not found for deletion.
+2025-06-13 20:19:03.900 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.Delete (CinelogAPI) in 1137.5056ms
+2025-06-13 20:19:03.900 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.Delete (CinelogAPI)'
+2025-06-13 20:19:03.901 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Actor with id 10 not found.
+   at Service.Services.ActorService.DeleteAsync(Int32 id) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 75
+   at CinelogAPI.Controllers.Admin.ActorController.Delete(Int32 id) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:19:03.925 +04:00 [ERR] Exception occurred
+System.Collections.Generic.KeyNotFoundException: Actor with id 10 not found.
+   at Service.Services.ActorService.DeleteAsync(Int32 id) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 75
+   at CinelogAPI.Controllers.Admin.ActorController.Delete(Int32 id) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:19:03.934 +04:00 [INF] Request finished HTTP/2 DELETE https://localhost:7209/api/Actor/Delete?id=10 - 404 null application/json; charset=utf-8 1211.4798ms
+2025-06-13 20:29:10.385 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 20:29:10.489 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 20:29:10.489 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 20:29:10.541 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 20:29:10.541 +04:00 [INF] Hosting environment: Development
+2025-06-13 20:29:10.541 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 20:29:10.810 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 20:29:10.923 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 113.5717ms
+2025-06-13 20:29:11.060 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 20:29:11.060 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 20:29:11.063 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 3.8659ms
+2025-06-13 20:29:11.083 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.496ms
+2025-06-13 20:29:11.296 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 20:29:11.322 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.3403ms
+2025-06-13 20:29:25.174 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/5 - null null
+2025-06-13 20:29:25.191 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:29:25.209 +04:00 [INF] Route matched with {action = "GetActorsByMovie", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActorsByMovie(Int32) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 20:29:26.359 +04:00 [INF] Executed DbCommand (40ms) [Parameters=[@__movieId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate], [t].[MovieId], [t].[ActorId], [t].[CharacterName], [t].[Id], [t].[CreatedDate], [t].[Description], [t].[Duration], [t].[IsDeleted], [t].[PosterUrl], [t].[ReleaseDate], [t].[Title], [t].[UpdatedDate]
+FROM [Actors] AS [a]
+LEFT JOIN (
+    SELECT [m1].[MovieId], [m1].[ActorId], [m1].[CharacterName], [m2].[Id], [m2].[CreatedDate], [m2].[Description], [m2].[Duration], [m2].[IsDeleted], [m2].[PosterUrl], [m2].[ReleaseDate], [m2].[Title], [m2].[UpdatedDate]
+    FROM [MovieActors] AS [m1]
+    INNER JOIN [Movies] AS [m2] ON [m1].[MovieId] = [m2].[Id]
+) AS [t] ON [a].[Id] = [t].[ActorId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+    WHERE [a].[Id] = [m].[ActorId] AND [m0].[Id] = @__movieId_0)
+ORDER BY [a].[Id], [t].[MovieId], [t].[ActorId]
+2025-06-13 20:29:26.373 +04:00 [WRN] No actors found for movieId: 5
+2025-06-13 20:29:26.377 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI) in 1165.9005ms
+2025-06-13 20:29:26.378 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:29:26.380 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: No actors found for movie with ID 5
+   at Service.Services.ActorService.GetActorsByMovieAsync(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 97
+   at CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 84
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:29:26.399 +04:00 [ERR] Exception occurred
+System.Collections.Generic.KeyNotFoundException: No actors found for movie with ID 5
+   at Service.Services.ActorService.GetActorsByMovieAsync(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 97
+   at CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 84
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:29:26.411 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/5 - 404 null application/json; charset=utf-8 1237.8296ms
+2025-06-13 20:31:07.310 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/3 - null null
+2025-06-13 20:31:07.314 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:31:07.314 +04:00 [INF] Route matched with {action = "GetActorsByMovie", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActorsByMovie(Int32) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 20:31:07.385 +04:00 [INF] Executed DbCommand (24ms) [Parameters=[@__movieId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate], [t].[MovieId], [t].[ActorId], [t].[CharacterName], [t].[Id], [t].[CreatedDate], [t].[Description], [t].[Duration], [t].[IsDeleted], [t].[PosterUrl], [t].[ReleaseDate], [t].[Title], [t].[UpdatedDate]
+FROM [Actors] AS [a]
+LEFT JOIN (
+    SELECT [m1].[MovieId], [m1].[ActorId], [m1].[CharacterName], [m2].[Id], [m2].[CreatedDate], [m2].[Description], [m2].[Duration], [m2].[IsDeleted], [m2].[PosterUrl], [m2].[ReleaseDate], [m2].[Title], [m2].[UpdatedDate]
+    FROM [MovieActors] AS [m1]
+    INNER JOIN [Movies] AS [m2] ON [m1].[MovieId] = [m2].[Id]
+) AS [t] ON [a].[Id] = [t].[ActorId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+    WHERE [a].[Id] = [m].[ActorId] AND [m0].[Id] = @__movieId_0)
+ORDER BY [a].[Id], [t].[MovieId], [t].[ActorId]
+2025-06-13 20:31:07.386 +04:00 [WRN] No actors found for movieId: 3
+2025-06-13 20:31:07.386 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI) in 72.2715ms
+2025-06-13 20:31:07.386 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:31:07.386 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: No actors found for movie with ID 3
+   at Service.Services.ActorService.GetActorsByMovieAsync(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 97
+   at CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 84
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:31:07.387 +04:00 [ERR] Exception occurred
+System.Collections.Generic.KeyNotFoundException: No actors found for movie with ID 3
+   at Service.Services.ActorService.GetActorsByMovieAsync(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 97
+   at CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 84
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:31:07.388 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/3 - 404 null application/json; charset=utf-8 77.8034ms
+2025-06-13 20:31:12.625 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/2 - null null
+2025-06-13 20:31:12.627 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:31:12.627 +04:00 [INF] Route matched with {action = "GetActorsByMovie", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActorsByMovie(Int32) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 20:31:12.637 +04:00 [INF] Executed DbCommand (0ms) [Parameters=[@__movieId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate], [t].[MovieId], [t].[ActorId], [t].[CharacterName], [t].[Id], [t].[CreatedDate], [t].[Description], [t].[Duration], [t].[IsDeleted], [t].[PosterUrl], [t].[ReleaseDate], [t].[Title], [t].[UpdatedDate]
+FROM [Actors] AS [a]
+LEFT JOIN (
+    SELECT [m1].[MovieId], [m1].[ActorId], [m1].[CharacterName], [m2].[Id], [m2].[CreatedDate], [m2].[Description], [m2].[Duration], [m2].[IsDeleted], [m2].[PosterUrl], [m2].[ReleaseDate], [m2].[Title], [m2].[UpdatedDate]
+    FROM [MovieActors] AS [m1]
+    INNER JOIN [Movies] AS [m2] ON [m1].[MovieId] = [m2].[Id]
+) AS [t] ON [a].[Id] = [t].[ActorId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+    WHERE [a].[Id] = [m].[ActorId] AND [m0].[Id] = @__movieId_0)
+ORDER BY [a].[Id], [t].[MovieId], [t].[ActorId]
+2025-06-13 20:31:12.637 +04:00 [WRN] No actors found for movieId: 2
+2025-06-13 20:31:12.638 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI) in 10.9875ms
+2025-06-13 20:31:12.638 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:31:12.638 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: No actors found for movie with ID 2
+   at Service.Services.ActorService.GetActorsByMovieAsync(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 97
+   at CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 84
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:31:12.639 +04:00 [ERR] Exception occurred
+System.Collections.Generic.KeyNotFoundException: No actors found for movie with ID 2
+   at Service.Services.ActorService.GetActorsByMovieAsync(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\Service\Services\ActorService.cs:line 97
+   at CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie(Int32 movieId) in C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI\Controllers\Admin\ActorController.cs:line 84
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-13 20:31:12.640 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/2 - 404 null application/json; charset=utf-8 14.6662ms
+2025-06-13 20:31:19.718 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/1 - null null
+2025-06-13 20:31:19.718 +04:00 [INF] Executing endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:31:19.718 +04:00 [INF] Route matched with {action = "GetActorsByMovie", controller = "Actor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActorsByMovie(Int32) on controller CinelogAPI.Controllers.Admin.ActorController (CinelogAPI).
+2025-06-13 20:31:19.721 +04:00 [INF] Executed DbCommand (1ms) [Parameters=[@__movieId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[Bio], [a].[BirthDate], [a].[CreatedDate], [a].[FullName], [a].[ImageUrl], [a].[IsDeleted], [a].[UpdatedDate], [t].[MovieId], [t].[ActorId], [t].[CharacterName], [t].[Id], [t].[CreatedDate], [t].[Description], [t].[Duration], [t].[IsDeleted], [t].[PosterUrl], [t].[ReleaseDate], [t].[Title], [t].[UpdatedDate]
+FROM [Actors] AS [a]
+LEFT JOIN (
+    SELECT [m1].[MovieId], [m1].[ActorId], [m1].[CharacterName], [m2].[Id], [m2].[CreatedDate], [m2].[Description], [m2].[Duration], [m2].[IsDeleted], [m2].[PosterUrl], [m2].[ReleaseDate], [m2].[Title], [m2].[UpdatedDate]
+    FROM [MovieActors] AS [m1]
+    INNER JOIN [Movies] AS [m2] ON [m1].[MovieId] = [m2].[Id]
+) AS [t] ON [a].[Id] = [t].[ActorId]
+WHERE EXISTS (
+    SELECT 1
+    FROM [MovieActors] AS [m]
+    INNER JOIN [Movies] AS [m0] ON [m].[MovieId] = [m0].[Id]
+    WHERE [a].[Id] = [m].[ActorId] AND [m0].[Id] = @__movieId_0)
+ORDER BY [a].[Id], [t].[MovieId], [t].[ActorId]
+2025-06-13 20:31:19.810 +04:00 [INF] Found 2 actors for movieId: 1
+2025-06-13 20:31:19.828 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Service.DTOs.Actor.ActorDto, Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-13 20:31:19.833 +04:00 [INF] Executed action CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI) in 114.0988ms
+2025-06-13 20:31:19.833 +04:00 [INF] Executed endpoint 'CinelogAPI.Controllers.Admin.ActorController.GetActorsByMovie (CinelogAPI)'
+2025-06-13 20:31:19.833 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/api/Actor/GetActorsByMovie/1 - 200 null application/json; charset=utf-8 114.8014ms
+2025-06-13 20:37:05.765 +04:00 [INF] User profile is available. Using 'C:\Users\Turan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-13 20:37:05.878 +04:00 [INF] Now listening on: https://localhost:7209
+2025-06-13 20:37:05.878 +04:00 [INF] Now listening on: http://localhost:5151
+2025-06-13 20:37:05.931 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-13 20:37:05.931 +04:00 [INF] Hosting environment: Development
+2025-06-13 20:37:05.931 +04:00 [INF] Content root path: C:\Users\Turan\source\repos\CinelogAPI\CinelogAPI
+2025-06-13 20:37:06.188 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/index.html - null null
+2025-06-13 20:37:06.292 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/index.html - 200 null text/html;charset=utf-8 104.8342ms
+2025-06-13 20:37:06.426 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_vs/browserLink - null null
+2025-06-13 20:37:06.426 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-13 20:37:06.429 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 3.066ms
+2025-06-13 20:37:06.444 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.8721ms
+2025-06-13 20:37:06.643 +04:00 [INF] Request starting HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - null null
+2025-06-13 20:37:06.677 +04:00 [INF] Request finished HTTP/2 GET https://localhost:7209/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.2937ms
